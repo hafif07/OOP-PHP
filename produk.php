@@ -17,7 +17,6 @@ class Produk{
 		   $harga = "harga";
 
 	public function komentar(){
-		global $judul;
 		return "saya ingin membeli produk $this->judul yang harganya Rp $this->harga" ;
 	}
 
