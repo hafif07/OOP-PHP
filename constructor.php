@@ -4,11 +4,11 @@
 
 
 class Produk{
-	public $judul = "judul",//instansiasi secara default,
-		   $penulis= "penulis",
-		   $penerbit ="penerbit",
-		   $harga = "harga";
-    public function __construct($judul,$penulis,$penerbit,$harga){
+	public $judul ,//instansiasi secara default,
+		   $penulis,
+		   $penerbit,
+		   $harga;
+    public function __construct($judul="judul",$penulis="penulis",$penerbit="penerbit",$harga="harga"){
     	$this->judul = $judul;
     	$this->penulis = $penulis;
     	$this->penerbit = $penerbit;
@@ -22,9 +22,15 @@ class Produk{
 }
 
 
-$produk3 = new Produk("naruto","masashi kishimoto","shonen jump",30000);
+$produk1 = new Produk("naruto","masashi kishimoto","shonen jump",30000);
+$produk2 = new Produk("dragon ball");
 
 
-echo "Komik : $produk3->judul , Harga Komik : Rp $produk3->harga";
+echo "Komik : $produk1->judul , Harga Komik : Rp $produk1->harga";
 echo "<br>";
-echo $produk3->komentar();
+echo $produk1->komentar();
+
+echo "<br>";
+echo "Komik : $produk2->judul , Harga Komik : Rp $produk2->harga";
+echo "<br>";
+echo $produk2->komentar();
