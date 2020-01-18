@@ -30,8 +30,8 @@ class Produk{
 
     }
 
-	public function komentar(){
-		return "saya ingin membeli produk $this->judul yang harganya Rp $this->harga" ;
+	public function getLabel(){
+		return "$this->penulis, $this->penerbit" ;
 	}
 
 }
@@ -57,10 +57,30 @@ var_dump($produk2);
 // var_dump($produk3);
 
 $produk3 = new Produk("naruto","masashi kishimoto","shonen jump",30000);
-
-
+$produk4 = new Produk("dragon ball");
 
 
 echo "Komik : $produk3->judul , Harga Komik : Rp $produk3->harga";
 echo "<br>";
-echo $produk3->komentar();
+echo $produk3->getLabel();
+
+echo "<br>";
+echo "Komik : $produk4->judul , Harga Komik : Rp $produk4->harga";
+echo "<br>";
+echo $produk4->getLabel();
+echo "<br>";
+
+
+class CetakInfoProduk{
+	// menginstansiasikan class yang hanya boleh mengambil dari class Produk
+	public function cetak(Produk $produk){
+		$str = "{$produk->judul}, {$produk->getLabel()}, {$produk->harga}";
+		return $str;
+	}
+}
+
+$infoProduk = new CetakInfoProduk();
+echo $infoProduk->cetak($produk3);
+
+
+
