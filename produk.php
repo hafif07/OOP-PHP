@@ -11,10 +11,24 @@ class Produk{
 
 	//cara2
 	// menunjukan sama sama dalam visibility public
-	public $judul = "judul",//instansiasi secara default,
-		   $penulis= "penulis",
-		   $penerbit ="penerbit",
-		   $harga = "harga";
+	// public $judul = "judul",//instansiasi secara default,
+	// 	   $penulis= "penulis",
+	// 	   $penerbit ="penerbit",
+	// 	   $harga = "harga";
+
+
+	public $judul,//instansiasi secara default,
+		   $penulis,
+		   $penerbit,
+		   $harga;
+
+	 public function __construct($judul="judul",$penulis="penulis",$penerbit="penerbit",$harga="harga"){
+    	$this->judul = $judul;
+    	$this->penulis = $penulis;
+    	$this->penerbit = $penerbit;
+    	$this->harga = $harga;
+
+    }
 
 	public function komentar(){
 		return "saya ingin membeli produk $this->judul yang harganya Rp $this->harga" ;
@@ -34,13 +48,17 @@ $produk2->tahunKeluaran = "2018";
 var_dump($produk2);
 
 
-$produk3 = new Produk();
-$produk3->judul = "Naruto";
-$produk3->penulis = "masashi kishimoto";
-$produk3->penerbit = "shonen jump";
-$produk3->harga = 30000;
+// $produk3 = new Produk();
+// $produk3->judul = "Naruto";
+// $produk3->penulis = "masashi kishimoto";
+// $produk3->penerbit = "shonen jump";
+// $produk3->harga = 30000;
 
-var_dump($produk3);
+// var_dump($produk3);
+
+$produk3 = new Produk("naruto","masashi kishimoto","shonen jump",30000);
+
+
 
 
 echo "Komik : $produk3->judul , Harga Komik : Rp $produk3->harga";
