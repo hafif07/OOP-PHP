@@ -57,7 +57,7 @@ var_dump($produk2);
 // var_dump($produk3);
 
 $produk3 = new Produk("naruto","masashi kishimoto","shonen jump",30000);
-$produk4 = new Produk("dragon ball");
+$produk4 = new Produk("fifa2020","ea sport","i dont know",30000);
 
 
 echo "Komik : $produk3->judul , Harga Komik : Rp $produk3->harga";
@@ -65,7 +65,7 @@ echo "<br>";
 echo $produk3->getLabel();
 
 echo "<br>";
-echo "Komik : $produk4->judul , Harga Komik : Rp $produk4->harga";
+echo "Game : $produk4->judul , Harga Komik : Rp $produk4->harga";
 echo "<br>";
 echo $produk4->getLabel();
 echo "<br>";
