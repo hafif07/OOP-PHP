@@ -49,6 +49,9 @@ class Produk{
 	public function getLabel(){
 		return "$this->penulis, $this->penerbit" ;
 	}
+	public function getInfoProduk(){
+		return "{$this->judul} , {$this->getLabel()} , RP {$this->harga} ";
+	}
 }
 
 class Komik extends Produk{
@@ -56,7 +59,7 @@ class Komik extends Produk{
 	public $jumlahHalaman;
 
 	public function getInfoKomik(){
-		$str = "Komik : {$this->judul} , {$this->getLabel()} , RP {$this->harga} , {$this->jumlahHalaman} halaman";
+		$str = "Komik : {$this->getInfoProduk()} , {$this->jumlahHalaman} halaman";
 		return $str;
 	}
 }
