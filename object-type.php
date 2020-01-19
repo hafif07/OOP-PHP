@@ -43,7 +43,7 @@ class CetakInfoProduk{
 }
 
 $infoProduk = new CetakInfoProduk();
-echo $infoProduk->cetak("sevf");
+echo $infoProduk->cetak($produk1);
 
 
 
