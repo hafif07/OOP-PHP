@@ -1,5 +1,5 @@
 <?php 
-require_once "init.php";
+require_once "App/init.php";
 
 
 $infoKomikNaruto = new Komik("Naruto","Masashi Kishimoto","Shonen Jump",30000,100);
